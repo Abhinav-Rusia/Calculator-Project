@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Sour Gummy", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to left bottom, #052817, #c8bd83);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.calculator {
+  background: #3a4452;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.15),
+    5px 5px 15px rgba(0, 0, 0, 0.2);
+  background: transparent;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  margin: 14px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(0.98);
+  transition: all 0.2s ease;
+}
+.btn:active {
+  transform: scale(0.92);
+  box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.1),
+    inset 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn.operator:hover {
+  background: rgba(51, 255, 216, 0.15);
+  color: #fff;
+}
+
+.btn.equal:hover {
+  background: rgba(51, 255, 216, 0.25);
+}
+
+.btn {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.15),
+      5px 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: -8px -8px 20px rgba(255, 255, 255, 0.2),
+      5px 5px 20px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.15),
+      5px 5px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.btn:focus {
+  animation: pulse 1s infinite;
+}
+
+form .display {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0;
+}
+
+form .display input {
+  text-align: right;
+  flex: 1;
+  font-size: 1.8rem;
+  height: 65px;
+  box-shadow: none;
+  background: transparent;
+  color: white;
+  outline: none;
+  padding: 10px;
+  border: 2px solid #a8b7a5;
+  font-weight: bold;
+  width: 100%;
+}
+
+form .equal {
+  width: 145px;
+  font-size: 2rem;
+}
+
+.operator {
+  color: #33ffd8;
+}
+
+@media screen and (max-width: 480px) {
+  .calculator {
+    padding: 10px;
+  }
+
+  .btn {
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+    margin: 5px;
+  }
+
+  form .display input {
+    font-size: 1.2rem;
+    height: 50px;
+  }
+
+  form .equal {
+    width: 115px;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .btn {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+    margin: 4px;
+  }
+
+  form .display input {
+    font-size: 1rem;
+    height: 40px;
+  }
+
+  form .equal {
+    width: 92px;
+    font-size: 1.2rem;
+  }
+}
